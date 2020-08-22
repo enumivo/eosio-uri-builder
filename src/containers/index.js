@@ -31,7 +31,7 @@ const { SigningRequest } = require("eosio-signing-request");
 
 const eosjs = require('eosjs')
 let eos = eosjs({
-  httpEndpoint: 'https://eos.greymass.com'
+  httpEndpoint: 'http://45.79.46.184:8888'
 });
 
 const initialState = {
@@ -42,7 +42,7 @@ const initialState = {
     permission: "............2",
   },
   billFirstAuthorizer: false,
-  blockchain: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
+  blockchain: 'ed8636abfe625d99fc9a759d49a016fd8dcae9193676a020aae2540c9fffe32f',
   background: true,
   broadcast: true,
   callback: '',
@@ -65,7 +65,6 @@ const initialState = {
 const knownContracts = [
   'eosio',
   'eosio.token',
-  'eosio.forum',
 ];
 
 const chainAliases = [
@@ -82,7 +81,9 @@ const chainAliases = [
   ['WAXTESTNET', 'f16b1833c747c43682f4386fca9cbb327929334a762755ebec17f6f23c9b8a12'],
   ['FIO', '21dcae42c0182200e93f954a074011f9048a7624c6fe81d3c9541a614a88bd1c'],
   ['FIOTESTNET', 'b20901380af44ef59c5918439a1f9a41d83669020319a80574b804a5f95cbd7e'],
-  ['TELOSTESTNET', '1eaa0824707c8c16bd25145493bf062aecddfeb56c736f6ba6397f3195f33c9f']
+  ['TELOSTESTNET', '1eaa0824707c8c16bd25145493bf062aecddfeb56c736f6ba6397f3195f33c9f'],
+  ['YAS','ed8636abfe625d99fc9a759d49a016fd8dcae9193676a020aae2540c9fffe32f'], 
+
 ];
 
 const chainAPIs = {
@@ -99,7 +100,8 @@ const chainAPIs = {
   'b912d19a6abd2b1b05611ae5be473355d64d95aeff0c09bedc8c166cd6468fe4': 'https://api.beos.world',
   '1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4': 'https://wax.greymass.com',
   'f16b1833c747c43682f4386fca9cbb327929334a762755ebec17f6f23c9b8a12': 'https://waxtestnet.greymass.com',
-  '1eaa0824707c8c16bd25145493bf062aecddfeb56c736f6ba6397f3195f33c9f': 'https://testnet.eos.miami'
+  '1eaa0824707c8c16bd25145493bf062aecddfeb56c736f6ba6397f3195f33c9f': 'https://testnet.eos.miami',
+  'ed8636abfe625d99fc9a759d49a016fd8dcae9193676a020aae2540c9fffe32f': 'http://45.79.46.184:8888',
 }
 
 // opts for the signing request
